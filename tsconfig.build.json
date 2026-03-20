@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "rootDir": "./backend",
+    "outDir": "./dist",
+    "tsBuildInfoFile": "./dist/.tsbuildinfo"
+  },
+  "include": ["backend/**/*.ts"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+}

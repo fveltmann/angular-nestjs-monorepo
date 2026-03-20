@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "coach-app": {
+    "app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -14,13 +14,13 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "frontend",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "src/main.ts",
+            "browser": "frontend/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -30,7 +30,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "frontend/styles.scss"
             ]
           },
           "configurations": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "coach-app:build:production"
+              "buildTarget": "app:build:production"
             },
             "development": {
-              "buildTarget": "coach-app:build:development"
+              "buildTarget": "app:build:development"
             }
           },
           "defaultConfiguration": "development"

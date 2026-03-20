@@ -1,17 +1,56 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
-# Compiled output
+# Dependencies
+/node_modules
+
+# Build & compile output
 /dist
+/build
 /tmp
 /out-tsc
 /bazel-out
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Caches & tooling artifacts
+/.angular/cache
+.sass-cache/
+/connect.lock
+/libpeerconnection.log
+testem.log
+/typings
+__screenshots__/
 
-# IDEs and editors
+# Environment
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Tests & coverage
+/coverage
+/.nyc_output
+
+# Temp
+.temp
+.tmp
+
+# Runtime & diagnostics
+pids
+*.pid
+*.seed
+*.pid.lock
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# IDEs & editors
 .idea/
 .project
 .classpath
@@ -20,7 +59,7 @@ yarn-error.log
 .settings/
 *.sublime-workspace
 
-# Visual Studio Code
+# VS Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -29,16 +68,6 @@ yarn-error.log
 !.vscode/mcp.json
 .history/*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-__screenshots__/
-
-# System files
+# OS
 .DS_Store
 Thumbs.db
