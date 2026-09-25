@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "noEmit": false,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "../dist/api",
+    "rootDir": ".",
+    "tsBuildInfoFile": "../.cache/tsconfig.backend.tsbuildinfo"
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

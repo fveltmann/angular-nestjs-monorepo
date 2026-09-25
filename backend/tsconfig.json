@@ -1,26 +1,14 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "composite": true,
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "resolvePackageJsonExports": true,
-    "esModuleInterop": true,
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "allowSyntheticDefaultImports": true,
     "target": "ES2023",
+    "noEmit": true,
+    "emitDecoratorMetadata": true,
+    "useDefineForClassFields": false,
     "sourceMap": true,
-    "outDir": "../dist",
-    "rootDir": ".",
-    "incremental": true,
-    "tsBuildInfoFile": "../dist/tsconfig.backend.tsbuildinfo",
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
+    "types": ["node"]
   },
   "include": ["**/*.ts"]
 }

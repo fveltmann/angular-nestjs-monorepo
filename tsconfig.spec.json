@@ -3,15 +3,15 @@
   "compilerOptions": {
     "composite": true,
     "incremental": true,
-    "tsBuildInfoFile": "./.angular/cache/tsconfig.app.tsbuildinfo",
-    "outDir": "./out-tsc/app",
-    "types": [],
+    "tsBuildInfoFile": "./.angular/cache/tsconfig.spec.tsbuildinfo",
+    "outDir": "./out-tsc/spec",
+    "types": ["vitest/globals"],
     "emitDecoratorMetadata": false,
     "target": "ES2022",
     "useDefineForClassFields": false,
     "module": "preserve",
     "moduleResolution": "bundler"
   },
-  "include": ["frontend/**/*.ts"],
-  "exclude": ["frontend/**/*.spec.ts"]
+  "include": ["frontend/**/*.spec.ts"],
+  "references": [{ "path": "./tsconfig.app.json" }]
 }

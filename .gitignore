@@ -12,6 +12,8 @@
 
 # Caches & tooling artifacts
 /.angular/cache
+/.cache
+*.tsbuildinfo
 .sass-cache/
 /connect.lock
 /libpeerconnection.log

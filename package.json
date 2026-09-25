@@ -7,15 +7,27 @@
   "license": "UNLICENSED",
   "scripts": {
     "ng": "ng",
+    "dev": "concurrently -n api,web -k \"npm run start:backend\" \"npm run start:frontend\"",
     "start:frontend": "ng serve",
+    "build": "npm run build:backend && npm run build:frontend",
     "build:frontend": "ng build",
     "watch:frontend": "ng build --watch --configuration development",
     "build:backend": "nest build",
-    "format": "prettier --write \"backend/**/*.ts\" \"frontend/**/*.ts\"",
+    "format": "prettier --write \"backend/**/*.ts\" \"frontend/**/*.{ts,html,scss}\"",
     "start:backend": "nest start --watch",
     "start:backend:debug": "nest start --debug --watch",
-    "start:backend:prod": "node dist/main",
-    "lint:backend": "eslint \"{backend,apps,libs,test}/**/*.ts\" --fix"
+    "start:backend:prod": "node dist/api/main",
+    "lint": "eslint \"frontend/**/*.ts\" \"backend/**/*.ts\"",
+    "lint:fix": "eslint \"frontend/**/*.ts\" \"backend/**/*.ts\" --fix",
+    "lint:frontend": "eslint \"frontend/**/*.ts\"",
+    "lint:backend": "eslint \"backend/**/*.ts\"",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:frontend": "ng test --watch=false",
+    "test:backend": "vitest run",
+    "typecheck": "tsc -b --pretty false"
+  },
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
   },
   "packageManager": "npm@12.1.0",
   "dependencies": {
@@ -36,18 +48,17 @@
     "@angular/build": "^22.2.0",
     "@angular/cli": "^22.2.0",
     "@angular/compiler-cli": "^22.2.0",
-    "@eslint/eslintrc": "^3.3.7",
     "@eslint/js": "^10.0.1",
     "@nestjs/cli": "^12.0.7",
     "@nestjs/schematics": "^12.0.5",
     "@nestjs/testing": "^12.1.0",
     "@types/express": "^5.0.6",
-    "@types/jest": "^30.0.0",
     "@types/node": "^26.6.2",
     "@types/supertest": "^7.2.1",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",
-    "eslint": "^10.11.0",
     "globals": "^17.12.0",
     "jsdom": "^30.1.1",
     "prettier": "^3.9.9",
@@ -56,8 +67,8 @@
     "ts-loader": "^9.6.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript-eslint": "^8.70.1",
     "typescript": "~6.0.3",
+    "typescript-eslint": "^8.70.1",
     "vitest": "^5.0.2"
   }
 }

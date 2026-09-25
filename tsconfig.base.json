@@ -1,22 +1,21 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "noEmit": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "importHelpers": true,
-    "target": "ES2022",
-    "useDefineForClassFields": false,
-    "module": "preserve",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  },
-  "include": ["**/*.ts"]
+  }
 }

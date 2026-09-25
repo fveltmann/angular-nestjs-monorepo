@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "noEmit": false,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "../out-tsc/backend-spec",
+    "rootDir": ".",
+    "tsBuildInfoFile": "../.cache/tsconfig.backend.spec.tsbuildinfo"
+  },
+  "include": ["**/*.spec.ts"],
+  "references": [{ "path": "./tsconfig.build.json" }]
+}

@@ -1,20 +1,9 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "bundler",
-    "incremental": true,
-    "tsBuildInfoFile": ".angular/cache/tsconfig.solution.tsbuildinfo"
-  },
+  "files": [],
   "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./backend/tsconfig.json"
-    }
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.spec.json" },
+    { "path": "./backend/tsconfig.build.json" },
+    { "path": "./backend/tsconfig.spec.json" }
   ]
 }

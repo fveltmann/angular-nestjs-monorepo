@@ -4,6 +4,7 @@
   "sourceRoot": "backend",
   "compilerOptions": {
     "deleteOutDir": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "tsConfigPath": "backend/tsconfig.build.json"
   }
 }
