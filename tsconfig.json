@@ -1,9 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
+    "moduleResolution": "bundler",
     "incremental": true,
     "tsBuildInfoFile": ".angular/cache/tsconfig.solution.tsbuildinfo"
   },

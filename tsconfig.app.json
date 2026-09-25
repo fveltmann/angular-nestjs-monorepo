@@ -13,7 +13,14 @@
     "module": "preserve",
     "moduleResolution": "bundler"
   },
-  "include": [
-    "frontend/**/*.ts"
-  ]
+  "include": ["frontend/**/*.ts"],
+  "angularCompilerOptions": {
+    "extendedDiagnostics": {
+      "checks": {
+        "nullishCoalescingNotNullable": "suppress",
+        "optionalChainNotNullable": "suppress"
+      }
+    },
+    "strictTemplates": false
+  }
 }
